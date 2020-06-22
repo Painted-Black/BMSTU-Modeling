@@ -535,56 +535,78 @@ $F_{max} = 100, t_{max} = 10, h = 0.01, \tau = 1$.
 
 \subsubsection*{Задание 3}
 
-Будем проводить измерения при $F_{max} = 50, t_{max} = 20, h = 0.01, \tau = 0.01$.
+Будем проводить измерения при $F_{max} = 10, t_{max} = 1, h = 0.01, \tau = 0.01$.
 
-%Рассмотрим график $F(t)$ на рисунке 21 с $t_{max} = 20$.
-%Чтобы импульсы при таких параметрах не перекрывались, частота $\nu$
-%должна быть $\frac{1}{\nu} > 150$, то есть $\nu < \frac{1}{150} = 0.0067$.
-На рисунках \ref{fig:nu10} - \ref{fig:nu1} изображены результаты работы программы
+Рассмотрим график $F(t)$ на рисунке \ref{fig:al} с $t_{max} = 1, F_{max} = 10$.
+Чтобы импульсы при таких параметрах не перекрывались, частота $\nu$
+должна быть примерно $\frac{1}{\nu} > 10$, то есть $\nu < \frac{1}{10} = 0.1$.
+
+\begin{figure}[!h]
+	\center{\includegraphics[width=15cm]{al}}
+	\caption{$t_{max} = 1, F_{max} = 10$.}
+	\label{fig:al}
+\end{figure}
+
+На рисунках \ref{fig:start} - \ref{fig:end} изображены результаты работы программы
 при различных значениях $\nu$.
 
 \newpage
 \begin{figure}[!h]
-	\center{\includegraphics[width=15cm]{nu10}}
-	\caption{$\nu = 0.1, t_u = 5$.}
-	\label{fig:nu10}
+	\center{\includegraphics[width=15cm]{Figure_2}}
+	\caption{$\nu = 0.01$}
+	\label{fig:start}
 \end{figure}
-
 \newpage
 \begin{figure}[!h]
-	\center{\includegraphics[width=15cm]{nu5}}
-	\caption{$\nu = 0.2, t_u = 3$.}
-	\label{fig:nu5}
+	\center{\includegraphics[width=15cm]{Figure_3}}
+	\caption{$\nu = 0.05$}
+	\label{fig:c1}
 \end{figure}
-
 \newpage
 \begin{figure}[!h]
-	\center{\includegraphics[width=15cm]{nu1}}
-	\caption{$\nu = 1, t_u = 0.9$.}
-	\label{fig:nu1}
+	\center{\includegraphics[width=15cm]{Figure_4}}
+	\caption{$\nu = 0.1$}
+	\label{fig:end}
 \end{figure}
+%\newpage
+%\begin{figure}[!h]
+%	\center{\includegraphics[width=15cm]{Figure_5}}
+%	\caption{$\nu = 0.5$}
+%	\label{fig:c2}
+%\end{figure}
+%\newpage
+%\begin{figure}[!h]
+%	\center{\includegraphics[width=15cm]{Figure_6}}
+%	\caption{$\nu = 1$}
+%	\label{fig:end}
+%\end{figure}
+%\newpage
+%\begin{figure}[!h]
+%	\center{\includegraphics[width=15cm]{compare}}
+%	\caption{$\nu = 1$}
+%	\label{fig:end}
+%\end{figure}
 
 По мере роста частоты импульсов размах колебаний
-температуры уменьшается.
+температуры уменьшается. При этом
+реализуется квазистационарный режим, при котором 
+в торец поступает постоянный поток $F_c = \nu \int \limits_0^{t_u} F(t) dt$.
 
-Рассмотрим результат расчета $T(x)$ по программе лаб. работы 3 при $F_0=F_c$
+При $t_u = 5.5$, $\frac{F(t_u)}{F_{max}} \approx 0.05$.
+Поэтому $F_c = 0.1 \int \limits_0^{5.5} \frac{10}{1} t e^{-(\frac{t}{1} - 1)} dt \approx 2.646$.
+
+Сравним полученный результат с результатом расчета $T(x)$ по программе лаб. работы 3 при $F_0=F_c$
 и при всех одинаковых параметрах модели, 
 в частности, вместо $k(T)$ будем использовать $k(x)$ из лаб. работы 3 
-(рисунки \ref{fig:gr1} и \ref{fig:gr2}).
+(рисунок \ref{fig:good}).
 
 \newpage
 \begin{figure}[!h]
-	\center{\includegraphics[width=15cm]{gr1}}
+	\center{\includegraphics[width=15cm]{good}}
 	\caption{График из лабораторной работы 3.}
-	\label{fig:gr1}
+	\label{fig:good}
 \end{figure}
 
-\newpage
-\begin{figure}[!h]
-	\center{\includegraphics[width=15cm]{gr2}}
-	\caption{График из лабораторной работы 5.}
-	\label{fig:gr2}
-\end{figure}
 
 \subsection*{Вывод}
 
